@@ -40,7 +40,10 @@ A full MERN application designed to help candidates prepare for technical and HR
 **AI**
 - OpenAI API (question generation)
 
-
+**Other Tools**
+- ImageKit (Profile picture & resume upload)
+- Multer (File handling)
+- Git & GitHub
 ---
 
 

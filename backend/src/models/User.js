@@ -44,17 +44,7 @@ const userSchema=new mongoose.Schema({
         required:[true,"Password is required"],
         minLength:[6,"Must be atleast 6 characters"],
         select:false,
-        validate(val){
-            if(!validator.isStrongPassword(val,{
-                minLength:6,
-                minLowercase:1,
-                minUppercase:1,
-                minNumbers:1,
-                minSymbols:0
-            })){
-                throw new Error( "Password must contain at least 1 uppercase, 1 lowercase, and 1 number")
-            }
-        }
+        
     },
 
     role:{
@@ -111,14 +101,17 @@ const userSchema=new mongoose.Schema({
         address:{
             State:{
                 type:String,
+                select:false,
             },
             City:{
                 type:String,
+                select:false,
             },
             Locality:{
                 type:String,
+                select:false,
             },
-            select:false,
+            
         },
         isActive:{
             type:Boolean,
